@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Diamond Dental</title>
+    <link rel="stylesheet" href="lucadzn.css">
+    <style>
+        /* Estilo básico para o layout e menu hamburguer */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fcd7e0; /* Fundo rosé suave */
+            color: #333;
+            overflow-y: scroll; /* Adiciona rolagem vertical */
+        }
+
+        header {
+            background: #000000; /* Fundo escuro */
+            color: #fcd7e0; /* Cor da fonte combinando com o fundo */
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Para posicionar o menu hamburguer */
+        }
+
+        .logo {
+            max-width: 400px; /* Aumentado o tamanho da logo */
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; /* Espaço entre o hamburguer e os links */
+            align-items: center; /* Alinha verticalmente */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove a margem padrão */
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fcd7e0; /* Cor da fonte para links */
+            text-decoration: none;
+            padding: 10px 15px; /* Espaçamento interno para links */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background 0.3s ease, color 0.3s ease; /* Suaviza a transição */
+        }
+
+        nav a:hover {
+            background: #FF4F9A; /* Fundo ao passar o mouse */
+            color: #fff; /* Cor da fonte ao passar o mouse */
+        }
+
+        .hamburger {
+            display: none; /* Oculta por padrão */
+            font-size: 24px;
+            cursor: pointer;
+            color: #fcd7e0; /* Cor do ícone */
+        }
+
+        #nav-links {
+            display: flex; /* Exibe os links horizontalmente */
+        }
+
+        @media (max-width: 600px) {
+            .hamburger {
+                display: block; /* Exibe o ícone de hamburguer em dispositivos móveis */
+            }
+
+            #nav-links {
+                display: none; /* Oculta os links por padrão */
+                flex-direction: column; /* Alinha links verticalmente */
+                position: absolute;
+                background: #000000; /* Fundo escuro para o menu */
+                width: 100%; /* Largura total */
+                top: 60px; /* Posição abaixo do header */
+                left: 0;
+                z-index: 10;
+                transition: max-height 0.3s ease; /* Suaviza a animação do menu */
+            }
+
+            #nav-links.show {
+                display: flex; /* Mostra os links quando ativo */
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Margem entre os itens do menu */
+                display: block; /* Exibe os links em bloco */
+            }
+        }
+
+        /* Estilos adicionais para as seções */
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro-image {
+            max-width: 70%; /* Aumentado para 70% da largura máxima */
+            height: auto;
+            margin: 20px 0;
+        }
+
+        button {
+            background: #FF007F; /* Rosa escuro */
+            color: #fff;
+            border: none;
+            padding: 8px 12px; /* Tamanho do botão reduzido */
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            display: block; /* Para que o botão ocupe uma linha inteira */
+            margin: 20px auto; /* Centraliza o botão e adiciona espaço */
+            width: 150px; /* Define uma largura fixa para o botão */
+            outline: none; /* Remove a linha azul ao clicar */
+        }
+
+        button:hover {
+            background: #FF4F9A; /* Rosa um pouco mais claro ao passar o mouse */
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff; /* Fundo branco para as seções */
+            transition: all 0.3s ease; /* Animação suave ao passar o mouse */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="trabalho luana png .png" alt="Logotipo da Clínica" class="logo">
+        <h1>Clínica Diamond Dental</h1>
+        <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div> <!-- Ícone do menu hamburguer -->
+            <ul id="nav-links">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#horarios">Horários</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="intro">
+        <h2>Bem-vindo à nossa clínica!</h2>
+        <p>Na Diamond Dental, somos dedicados a proporcionar cuidados odontológicos de excelência, com foco no bem-estar e saúde bucal de nossos pacientes. Com uma equipe de profissionais altamente qualificados e tecnologia de ponta, oferecemos uma ampla gama de tratamentos, desde os mais simples até os mais complexos, sempre com atenção aos mínimos detalhes.</p>
+        <img src="WhatsApp Image 2024-10-01 at 17.31.54.jpeg" alt="Dentista" class="intro-image">
+        <a href="https://wa.me/65999086314">
+            <button>Agende uma Consulta</button>
+        </a>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Profilaxia</li>
+            <li>Restaurações</li>
+            <li>Clareamento Dental</li>
+            <li>Tratamentos Endodônticos</li>
+            <li>Extrações</li>
+            <li>Reabilitação oral e prótese dentária</li>
+            <li>Implantodontia</li>
+            <li>Ortodontia e Alinhamento Dentário</li>
+        </ul>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <ul>
+            <li>Atendimento Humanizado: Sabemos que muitas pessoas têm receio de ir ao dentista, e nossa missão é mudar isso. Em nossa clínica, você encontrará um ambiente acolhedor e uma equipe preparada para tornar sua experiência tranquila e confortável.</li>
+            <li>Tecnologia Avançada: Utilizamos equipamentos de última geração para garantir diagnósticos precisos e tratamentos eficientes. Cada detalhe é pensado para oferecer a você o que há de mais moderno e seguro em odontologia.</li>
+            <li>Resultados Duradouros: Não se trata apenas de estética - nós trabalhamos para que você tenha saúde bucal de longa duração. Cada procedimento é realizado com máxima precisão e comprometimento com o bem-estar do paciente.</li>
+        </ul>
+    </section>
+
+    <section id="horarios">
+        <h2>Horários de Atendimento</h2>
+        <p>Nossos horários de funcionamento são:</p>
+        <ul>
+            <li>Segunda a Sexta: 08:00 - 18:00</li>
+            <li>Sábado: 09:00 - 14:00</li>
+            <li>Domingo: Fechado</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
+    <script src="script.js"></script>
+
+
+    <footer>
